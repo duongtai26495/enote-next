@@ -5,10 +5,10 @@ import User from '@/components/User'
 import { baseURL } from '@/utils/constants'
 import axios from 'axios'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-const Register = () => {
+const page = () => {
     const [err, setErr] = useState(false)
 
     const route = useRouter()
@@ -114,4 +114,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default page
