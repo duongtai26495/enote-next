@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers store={store}> {/* Bọc toàn bộ ứng dụng trong Provider và cung cấp Redux store */}
           <Header />
-          <main className='w-full px-3 py-2'>
+          <main className='w-full'>
             {children}
           </main>
         </Providers>

@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+
+.noteChBox {
+  width: 20px;
+  height: 20px;
+}
+
+.taskChBox{
+  width: 16px;
+}
