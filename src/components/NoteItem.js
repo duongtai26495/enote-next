@@ -1,7 +1,7 @@
 import { access_token } from "@/utils/constants";
 import { fetchApiData } from "@/utils/functions";
 import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TaskRow from "./TaskRow";
 
 export default function NoteItem({ item }) {
@@ -33,7 +33,7 @@ export default function NoteItem({ item }) {
     }, [])
 
 
-    const RenderTaskItem = () => {
+    const RenderTaskItem = useMemo(() => {
         return (
             tasks &&
             tasks.map((item, index) => {
@@ -41,7 +41,7 @@ export default function NoteItem({ item }) {
             }
             )
         )
-    }
+    })
 
     const updateItem = async () => {
         const token = Cookies.get(access_token)

@@ -36,7 +36,7 @@ const page = () => {
 
     try {
         const result = await axios.request(config)
-        result.status == 201 && route.push("/login?success")
+        result.status == 201 && route.push("/authen/login?success")
     } catch (error) {
         setErr(true)
     }
@@ -105,7 +105,7 @@ const page = () => {
                     </div>
                     <button type="submit" className="block w-full bg-indigo-500 hover:bg-indigo-600 py-2 rounded-lg text-white font-semibold my-5">Join now</button>
                     
-                    <span className="text-sm ml-2">Already have an account ? <Link className={`underline hover:text-blue-600 text-blue-500 font-bold`} href={"/login"}>Login now</Link></span>
+                    <span className="text-sm ml-2">Already have an account ? <Link className={`underline hover:text-blue-600 text-blue-500 font-bold`} href={"/authen/login"}>Login now</Link></span>
 
                     {err && <p className='text-red-600 text-center w-full m-auto my-5'>Something went wrong !</p>}
                 </form>

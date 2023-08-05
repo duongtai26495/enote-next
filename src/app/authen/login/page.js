@@ -3,6 +3,7 @@ import UserLogin from '@/components/UserLogin'
 import { access_token, baseURL, refresh_token, localUser } from '@/utils/constants'
 import axios from 'axios'
 import Link from 'next/link'
+import '@/app/globals.css'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Cookies from 'js-cookie';
@@ -128,7 +129,7 @@ const page = () => {
                         </div>
                     </button>
 
-                    <p className="mt-8">Need an account? <Link href="/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
+                    <p className="mt-8">Need an account? <Link href="/authen/register" className="text-blue-500 hover:text-blue-700 font-semibold">Create an
                         account</Link></p>
 
                     {err && <p className='text-red-600 text-center w-full my-5'>Something went wrong !</p>}

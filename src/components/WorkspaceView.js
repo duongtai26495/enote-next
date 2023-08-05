@@ -27,14 +27,15 @@ export default function WorkspaceView() {
         return (
             ws && 
             ws.map((item, index)=>(
-            <li onClick={()=> selectedWs(item)} className={`text-black rounded-md py-1 px-2 min-w-fit cursor-pointer hover:shadow-2xl border ${currentWs.id == item.id ? "bg-red-700 text-white" : "bg-white"}`} key={index}>{item.name}</li>
+            <li onClick={()=> selectedWs(item)} 
+            className={`text-black py-1 px-3 min-w-fit cursor-pointer hover:shadow-2xl border-t border-l border-l-red-700 border-t-red-700 ${currentWs.id == item.id ? "bg-red-700 text-white" : "bg-white"}`} key={index}>{item.name}</li>
         )))
     }
     
     return (
         <div className=" pt-2 bg-white px-2 ">
             <p className="my-1 text-sm font-bold ">Workspaces</p>
-            <ul className="w-full flex flex-row overflow-x-auto gap-3 ">
+            <ul className="w-full flex flex-row overflow-x-auto">
             <RenderData />
             </ul>
             <NotesView id={currentWs.id}/>

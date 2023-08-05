@@ -13,7 +13,6 @@ const Header = () => {
         { name: "Workspace", url: "/", id: "home" },
         { name: "AI assistant", url: "/chat", id: "chat" }
     ]
-
     const checkLogin = () => {
         const token = Cookies.get(access_token)
 
@@ -48,7 +47,7 @@ const Header = () => {
 
     const [openMobileNav, setOpenMobileNav] = useState(false)
     return (
-        <div className="2xl:w-full 2xl:mx-auto">
+        <div className={`2xl:w-full 2xl:mx-auto`} id="nav_bar">
             <div className="bg-white shadow-lg p-3">
                 <nav className="flex justify-between">
                     <div className="lg:pr-16 pr-6">
